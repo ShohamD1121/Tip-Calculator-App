@@ -1,0 +1,222 @@
+:root {
+    --Strong-Cyan: hsl(172, 67%, 45%);
+    --Very-Dark-Cyan: hsl(183, 100%, 15%);
+    --Dark-Grayish-Cyan: hsl(186, 14%, 43%);
+    --Dark-Grayish-Cyan-2: hsl(184, 14%, 56%);
+    --Light-Grayish-Cyan: hsl(185, 41%, 84%);
+    --Light-Grayish-Cyan-2: hsl(189, 41%, 97%);
+}
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+html , body{
+    min-height : 100vh;
+}
+
+.title{
+    margin-bottom : 30px;
+    font-size : 1.5rem;
+    color : var(--Very-Dark-Cyan);
+}
+
+.title span{
+    letter-spacing : 0.5rem;
+}
+
+body {
+    background-color : var(--Light-Grayish-Cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius : 15px;
+}
+
+
+.bill-cont {
+    padding: 30px;
+    width: 250px;
+}
+
+.bill-cont p{
+    color : var(--Very-Dark-Cyan);
+    font-size : 0.6rem;
+    font-weight : 700;
+    margin-bottom : 7px;
+}
+
+.upper{
+    margin : 0 0 20px;
+}
+
+.bottom {
+    margin : 20px 0 0;
+    text-align : center;
+}
+
+.calc{
+    background-color : var(--Strong-Cyan);
+    border-radius : 10px;
+    height: 20px;
+    width : 100px;
+    border : none;
+    margin-top : 15px;
+}
+
+.calc:hover{
+    background-color : var(--Light-Grayish-Cyan);
+}
+
+input {
+    background-color: var(--Light-Grayish-Cyan-2);
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    text-align: right;
+    color: var(--Dark-Grayish-Cyan);
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid var(--Strong-Cyan);
+}
+
+.bill-input[type='text'] {
+    position : relative;
+    content: "";
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position : left;
+    background-position-x : 12px;
+}
+
+.people-input[type='text'] {
+    position: relative;
+    content: "";
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 12px;
+}
+
+.middle{
+    display : grid;
+    grid-template-columns : repeat(3, 1fr);
+    gap : 0.8rem;
+}
+
+.middle div{
+    background-color : var(--Very-Dark-Cyan);
+    border-radius : 5px;
+    color : white;
+    height : 30px;
+    display : flex;
+    text-align : center;
+    align-items : center;
+    justify-content : center;
+}
+
+.middle div:hover{
+    background-color : var(--Strong-Cyan);
+    color : var(--Very-Dark-Cyan);
+}
+
+
+
+.custom-input{
+    text-align : center;
+    font-size : 15px;
+}
+
+
+.result-cont {
+    background-color: var(--Very-Dark-Cyan);
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 25px 25px 25px 0;
+}
+
+.result-cont .per-person{
+    display : flex;
+    justify-content : space-between;
+    margin : 0 0 25px;
+}
+
+.result-cont .per-person .T{
+    color : white;
+    font-size : 0.7rem;
+}
+
+.result-cont .per-person .Slash{
+    color : var(--Dark-Grayish-Cyan-2);
+    font-size : 0.7rem;
+}
+
+.result-cont .per-person h1{
+    color : var(--Strong-Cyan);
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--Strong-Cyan);
+    border-radius: 3px;
+    height: 30px;
+    color: var(--Very-Dark-Cyan);
+}
+
+.reset:hover{
+    background-color : var(--Light-Grayish-Cyan);
+}
+
+@media only screen and (max-width : 500px){
+    .title{
+        margin-top : 30px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        width : 250px;
+    }
+    .bill-cont{
+        width : auto;
+    }
+    .result-cont {
+        margin-left : 15px;
+        width: auto;
+        height : 160px;
+        padding : 20px;
+        margin-top : 0;
+    }
+    .middle {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    .result-cont .per-person {
+        margin: 0 0 10px;
+    }
+    .result-cont .per-person .T .Slash {
+        font-size: 0.4rem;
+    }
+    .result-cont .per-person h1 {
+        font-size: 1.2rem;
+    }
+}
