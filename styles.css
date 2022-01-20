@@ -199,7 +199,7 @@ input:focus {
         width : auto;
     }
     .result-cont {
-        margin-left : 15px;
+        margin-left : 25px;
         width: auto;
         height : 160px;
         padding : 20px;
@@ -210,13 +210,19 @@ input:focus {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
     }
+    .calc{
+        height : 30px;
+    }
     .result-cont .per-person {
         margin: 0 0 10px;
     }
     .result-cont .per-person .T .Slash {
-        font-size: 0.4rem;
+        font-size: 0.3rem;
     }
     .result-cont .per-person h1 {
         font-size: 1.2rem;
+    }
+    .reset{
+        margin-top : 20px;
     }
 }
